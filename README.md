@@ -4,17 +4,14 @@
 <p align="center">Make things get sticky &hellip;in a good way</p>
 <hr />
 <p align="center">
-  <a href="https://circleci.com/gh/dollarshaveclub/stickybits">
-    <img alt="CircleCI" src="https://circleci.com/gh/dollarshaveclub/stickybits.svg?style=svg" />
-  </a>
   <a href="https://www.npmjs.com/package/stickybits">
     <img alt="npm version" src="https://badge.fury.io/js/stickybits.svg" />
   </a>
   <a href="https://unpkg.com/stickybits@latest/dist/stickybits.min.js">
     <img alt="unpkg" src="https://img.shields.io/badge/unpkg-link-blue.svg">
   </a>
-  <a href="https://greenkeeper.io/">
-    <img alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/stickybits.svg" />
+  <a href="https://snyk.io/test/github/yowainwright/stickybits">
+    <img alt="snyk" src="https://snyk.io/test/github/yowainwright/stickybits/badge.svg" />
   </a>
   <a href="https://codecov.io/gh/dollarshaveclub/stickybits">
     <img alt="codecov" src="https://codecov.io/gh/dollarshaveclub/face-assets/branch/master/graph/badge.svg?token=94k54HtPDh" />
@@ -37,7 +34,7 @@
 - it is super simple & lightweight
 - it provides a [wiki](https://github.com/dollarshaveclub/stickybits/wiki) that digs deeply into fundementals of `position: sticky` and `position: fixed` and it works with them.
 
-----
+---
 
   <p align="center">
     <a href="#installing-from-a-package-manager">Installation</a>&nbsp;&nbsp;
@@ -52,7 +49,7 @@
     <a href="https://github.com/dollarshaveclub/stickybits/wiki">Wiki</a>
   </p>
 
-----
+---
 
 ## Installing from a package manager
 
@@ -81,9 +78,7 @@ Or as a module with `import stickybits from 'stickybits'`
 <h2 id="usage">Basic Usage</h2>
 
 ```javascript
-
-stickybits('selector');
-
+stickybits("selector");
 ```
 
 ### By default, a selected stickybits element will
@@ -91,19 +86,17 @@ stickybits('selector');
 - Stick elements to the top of the viewport when scrolled to vertically.
 - Stick elements at the bottom of their parent element when scrolled past.
 
-----
+---
 
 **Key Note:** Stickybits expects and works best when the element that will become sticky is wrapped within a parent element that defines when the element starts being sticky and stops being sticky. See below for visual reference.
 
 ```html
-
 <main id="some-stickybit-parent">
   <nav id="some-stickybit-nav"></nav>
 </main>
-
 ```
 
-----
+---
 
 <h2 id="feature"><code>useStickyClasses</code> Feature</h2>
 
@@ -118,15 +111,12 @@ To provide more feature richness to the Stickybits experience, a `.js-is-sticky-
 To use `useStickyClasses`:
 
 ```javascript
-
-stickybits('selector', {useStickyClasses: true});
-
+stickybits("selector", { useStickyClasses: true });
 ```
 
 Then, in css you can do:
 
 ```css
-
 .some-sticky-element.js-is-sticky {
   background-color: red;
 }
@@ -136,7 +126,6 @@ Then, in css you can do:
 .some-sticky-element.js-is-stuck {
   background-color: green;
 }
-
 ```
 
 View [add css classes](#notes) for more information on StickyBits CSS Classes.
@@ -152,9 +141,7 @@ Stickybits loosely works for `bottom` positioning as well.
 To have a StickyBits element stick to the `bottom`:
 
 ```javascript
-
-stickybits('selector', {verticalPosition: 'bottom'});
-
+stickybits("selector", { verticalPosition: "bottom" });
 ```
 
 ### Custom Scroll Element
@@ -164,9 +151,7 @@ By default, if Stickybits uses `window` scrolling to define Sticky Elements. An 
 To have Stickybit use an selector besides `window`:
 
 ```javascript
-
-stickybits('selector', {scrollEl: 'an-id'});
-
+stickybits("selector", { scrollEl: "an-id" });
 ```
 
 ### StickyBit Sticky Offset
@@ -176,9 +161,7 @@ By default, a StickyBits element will have a `0px` sticky layout top offset. Thi
 To have a StickyBits element stick with a `20px` offset to its vertical layout position:
 
 ```javascript
-
-stickybits('selector', {stickyBitStickyOffset: 20});
-
+stickybits("selector", { stickyBitStickyOffset: 20 });
 ```
 
 ### StickyBits Cleanup
@@ -186,10 +169,8 @@ stickybits('selector', {stickyBitStickyOffset: 20});
 To _cleanup_ an instance of Stickybits:
 
 ```javascript
-
-const stickybitsInstancetoBeCleanedup = stickybits('selector');
+const stickybitsInstancetoBeCleanedup = stickybits("selector");
 stickybitsInstancetoBeCleanedup.cleanup();
-
 ```
 
 ### StickyBits Update
@@ -197,35 +178,30 @@ stickybitsInstancetoBeCleanedup.cleanup();
 To _update_ the calculations of an instance of Stickybits:
 
 ```javascript
-
-const stickybitsInstancetoBeUpdated = stickybits('selector');
+const stickybitsInstancetoBeUpdated = stickybits("selector");
 stickybitsInstancetoBeUpdated.update();
-
 ```
 
 Re-calculates each Stickybits instance's offsets (stickyStart, stickyStop).
 If the Stickybits implementer would like re-calculate offsets when the DOM window is resized or when the url changes. `.update()` can be invoked within an event listener.
 
 ```javascript
-const stickybitsInstancetoBeUpdated = stickybits('selector');
+const stickybitsInstancetoBeUpdated = stickybits("selector");
 stickybitsInstancetoBeUpdated.update({ stickyBitStickyOffset: 20 });
-
 ```
 
 #### More Stickybits Update Examples
 
 ```javascript
-
 // when the window is resized
-const stickybitsInstancetoBeUpdated = stickybits('selector');
-window.addEventListener('resize', () => {
+const stickybitsInstancetoBeUpdated = stickybits("selector");
+window.addEventListener("resize", () => {
   stickybitsInstancetoBeUpdated.update();
 });
 // when the url hash changes
-window.addEventListener('hashchange', () => {
+window.addEventListener("hashchange", () => {
   stickybitsInstancetoBeUpdated.update();
 });
-
 ```
 
 **Note:** `.update` does not re-initialize classnames or pre-set calculations. Perhaps the update value can help you with that (see the paragraph below).
@@ -235,11 +211,9 @@ window.addEventListener('hashchange', () => {
 Props can be updated to each instance by passing then into the `.update` function as an object.
 
 ```javascript
-
 // .update({ someProp: somePropValue })
-const stickybitsInstancetoBeUpdated = stickybits('selector');
+const stickybitsInstancetoBeUpdated = stickybits("selector");
 stickybitsInstancetoBeUpdated.update({ stickyBitStickyOffset: 20 });
-
 ```
 
 ### StickyBits NoStyles
@@ -247,9 +221,7 @@ stickybitsInstancetoBeUpdated.update({ stickyBitStickyOffset: 20 });
 To use StickyBits without inline styles except for `position: sticky` or `position: fixed`:
 
 ```javascript
-
-stickybits('selector', {noStyles: true});
-
+stickybits("selector", { noStyles: true });
 ```
 
 ### StickyBits Custom CSS Classes
@@ -259,25 +231,19 @@ To use custom CSS classes for Stickybits, add the appropriate properties and val
 parentClass:
 
 ```javascript
-
-stickybits('selector', {parentClass: 'new-parent-classname'});
-
+stickybits("selector", { parentClass: "new-parent-classname" });
 ```
 
 stickyClass:
 
 ```javascript
-
-stickybits('selector', {stickyClass: 'new-sticky-classname'});
-
+stickybits("selector", { stickyClass: "new-sticky-classname" });
 ```
 
 stuckClass:
 
 ```javascript
-
-stickybits('selector', {stuckClass: 'new-stuck-classname'});
-
+stickybits("selector", { stuckClass: "new-stuck-classname" });
 ```
 
 ### StickyBits useFixed
@@ -287,22 +253,18 @@ To not use `position: sticky` **ever**, add the following key value to a stickyb
 parentClass:
 
 ```javascript
-
-stickybits('selector', {useFixed: true});
-
+stickybits("selector", { useFixed: true });
 ```
 
 To change all of the CSS classes
 
 ```javascript
-
-stickybits('selector', {
-  parentClass: 'new-parent-classname',
-  stickyClass: 'new-sticky-classname',
-  stuckClass: 'new-stuck-classname',
-  stickyChangeClass: 'new-sticky-change-classname'
+stickybits("selector", {
+  parentClass: "new-parent-classname",
+  stickyClass: "new-sticky-classname",
+  stuckClass: "new-stuck-classname",
+  stickyChangeClass: "new-sticky-change-classname"
 });
-
 ```
 
 ### StickyBits useGetBoundingClientRect
@@ -311,9 +273,7 @@ To not use `offsetTop` provide the optional boolean `useGetBoundingClientRect`.
 This feature is optimal when dealing with things like CSS calc which can throw off `offsetTop` calculations. Read more about this functionality [here](https://stanko.github.io/javascript-get-element-offset/).
 
 ```javascript
-
-stickybits('selector', {useGetBoundingClientRect: true});
-
+stickybits("selector", { useGetBoundingClientRect: true });
 ```
 
 \* For jQuery and Zepto support, read the jQuery notes [below](#jquery).
@@ -325,8 +285,8 @@ provide a function `applyStyle`. This is useful for example if you want to
 integrate with a framework or view library and want to delegate DOM
 manipulations to it.
 
-``` javascript
-stickybits('selector', {
+```javascript
+stickybits("selector", {
   applyStyle: ({ classes, styles }, instance) => {
     // Apply styles and classes to your element
   }
@@ -346,7 +306,7 @@ stickybits('selector', {
 - [Use GetBoundingClientRect](https://codepen.io/yowainwright/pen/PdZGMQ) ie: `const stickything = stickybits('selector', {useGetBoundingClientRect: true})`
 - [As a jQuery or Zepto Plugin](http://codepen.io/yowainwright/pen/57b852e88a644e9d919f843dc7b3b5f1) ie: `$('selector').stickybits()`
 
-----
+---
 
 ### Extended Examples
 
@@ -356,7 +316,7 @@ stickybits('selector', {
 - [ScrollEl](https://codepen.io/yowainwright/pen/EXzJeb) ie: `stickybits('selector', {scrollEl: 'a-custom-scroll-el'})` or `stickybits('selector', {scrollEl: element})`
 - If you have Stickybits examples, please submit an [issue](https://github.com/dollarshaveclub/stickybits/issues) with a link to it. 🙏
 
-----
+---
 
 Have another example or question? Feel free to [comment](https://github.com/dollarshaveclub/stickybits/issues). 🙌
 
@@ -366,9 +326,9 @@ Have another example or question? Feel free to [comment](https://github.com/doll
 
 3 CSS classes will be added and removed by Stickybits if `position: sticky` is not supported or if the `useStickyClasses: true` option is added to the plugin call. These Classes can be modified as desired. See the _With Custom Classes_ example above.
 
--  `js-is-sticky` if the selected element is sticky.
--  `js-is-stuck` if the selected element is stopped at the bottom of its parent.
--  `js-stickybit-parent` so that styles can easily be added to the parent of a Stickybits element
+- `js-is-sticky` if the selected element is sticky.
+- `js-is-stuck` if the selected element is stopped at the bottom of its parent.
+- `js-stickybit-parent` so that styles can easily be added to the parent of a Stickybits element
 
 ### Not a Polyfill
 
@@ -387,55 +347,43 @@ Stickybits is a no dependency JavaScript plugin. It provides the smallest API po
 Basic
 
 ```javascript
-
-$('selector').stickybits();
-
+$("selector").stickybits();
 ```
 
 With `scrollEl`
 
 ```javascript
-
-$('selector').stickybits({scrollEl: '#scrollEl'});
+$("selector").stickybits({ scrollEl: "#scrollEl" });
 
 // or
 
-const el = document.querySelector('#scrollEl');
-$('selector').stickybits({scrollEl: el});
-
+const el = document.querySelector("#scrollEl");
+$("selector").stickybits({ scrollEl: el });
 ```
 
 With `.update`
 
 ```javascript
-
-const  instance = $('selector').stickybits();
+const instance = $("selector").stickybits();
 instance.update();
-
 ```
 
 With `useStickyClasses`
 
 ```javascript
-
-$('selector').stickybits({useStickyClasses: true});
-
+$("selector").stickybits({ useStickyClasses: true });
 ```
 
 With `verticalPosition`
 
 ```javascript
-
-$('selector').stickybits({verticalPosition: 'bottom'});
-
+$("selector").stickybits({ verticalPosition: "bottom" });
 ```
 
 With `stickyBitStickyOffset`
 
 ```javascript
-
-$('selector').stickybits({stickyBitStickyOffset: 20});
-
+$("selector").stickybits({ stickyBitStickyOffset: 20 });
 ```
 
 ## Debugging
@@ -445,15 +393,13 @@ Stickybits 2.0 provides the same API but with more debugging feedback.
 To view the Stickybits API in it's simpliest form:
 
 ```javascript
-
-const  stickybit = stickybits('a selection');
+const stickybit = stickybits("a selection");
 console.log(stickybit);
-
 ```
 
 For more debugging and managing Stickybits, view the [wiki](https://github.com/dollarshaveclub/stickybits/wiki).
 
-----
+---
 
 ### Utility properties
 
@@ -462,11 +408,9 @@ Stickybits provides both `version` and `userAgent` properties which were added t
 These utility properties can be accessed as direct child properties of the instantiated Stickybits item.
 
 ```javascript
-
-const stickybit = stickybits('a selection')
-stickybit.version // will show the version of stickybits being used
-stickybit.userAgent // will show which userAgent stickybits is detecting
-
+const stickybit = stickybits("a selection");
+stickybit.version; // will show the version of stickybits being used
+stickybit.userAgent; // will show which userAgent stickybits is detecting
 ```
 
 ## Browser Compatibility
@@ -485,7 +429,7 @@ This plugin was heavily influenced by [Filament Group](https://www.filamentgroup
 
 Architecture discussions and Pull Request help has been provided by [Jacob Kelley](https://github.com/jakiestfu), [Brian Gonzalez](https://github.com/briangonzalez/), and [Matt Young](https://github.com/someguynamedmatt). It is much appreciated!
 
-----
+---
 
 [Created](https://github.com/yowainwright/sticky-bits) and maintained by [Jeff Wainwright](https://github.com/yowainwright) with [Dollar Shave Club Engineering](https://github.com/dollarshaveclub).
 
