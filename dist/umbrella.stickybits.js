@@ -1,7 +1,7 @@
 /**
   stickybits - Stickybits is a lightweight alternative to `position: sticky` polyfills
   @version v3.7.5
-  @link hhttps://github.com/yowainwright/stickybits#readme
+  @link https://github.com/yowainwright/stickybits#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)
   @license MIT
 **/
