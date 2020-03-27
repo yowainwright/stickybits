@@ -1,3 +1,12 @@
+## [3.7.6](https://github.com/yowainwright/stickybits/compare/3.7.5...3.7.6) (2020-03-27)
+
+
+### update
+
+* removes config.yml (#3) ([6bf25dcb65afe2fc9e10e9c3903dd1025754bb36](https://github.com/yowainwright/stickybits/commit/6bf25dcb65afe2fc9e10e9c3903dd1025754bb36)), closes [#3](https://github.com/yowainwright/stickybits/issues/3)
+
+
+
 ## [3.7.5](https://github.com/yowainwright/stickybits/compare/3.7.4...3.7.5) (2020-03-27)
 
 
