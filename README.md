@@ -10,7 +10,9 @@
   <a href="https://unpkg.com/stickybits@latest/dist/stickybits.min.js">
     <img alt="unpkg" src="https://img.shields.io/badge/unpkg-link-blue.svg">
   </a>
-  <*a href="https://snyk.io/test/github/yowainwright/stickybits">
+  <a href="https://snyk.io/test/github/yowainwright/stickybits">
+    <img alt="snyk" src="https://snyk.io/test/github/yowainwright/stickybits/badge.svg" />
+  </a>
   <a href="https://codecov.io/gh/dollarshaveclub/stickybits">
     <img alt="codecov" src="https://codecov.io/gh/dollarshaveclub/face-assets/branch/master/graph/badge.svg?token=94k54HtPDh" />
   </a>
