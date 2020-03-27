@@ -1,6 +1,6 @@
 {
   "name": "stickybits",
-  "version": "3.7.4",
+  "version": "3.7.5",
   "description": "Stickybits is a lightweight alternative to `position: sticky` polyfills",
   "main": "dist/stickybits.js",
   "module": "dist/stickybits.es.js",
@@ -38,11 +38,11 @@
     "testURL": "http://localhost/"
   },
   "bugs": {
-    "url": "https://github.com/dollarshaveclub/stickybits/issues"
+    "url": "https://github.com/yowainwright/stickybitsissues"
   },
-  "homepage": "https://github.com/dollarshaveclub/stickybits#readme",
+  "homepage": "hhttps://github.com/yowainwright/stickybits#readme",
   "repository": {
-    "url": "https://github.com/dollarshaveclub/stickybits.git",
+    "url": "hhttps://github.com/yowainwright/stickybits",
     "type": "git"
   },
   "author": "Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)",
