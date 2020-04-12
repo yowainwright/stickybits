@@ -184,6 +184,79 @@ test("stickybits doesn't change position style if noStyles is true", () => {
   expect(parent.style['position']).toBe(positionStyle);
 })
 
+test("stickybits creates spacer if the element is fixed", () => {
+  document.body.innerHTML = '<div id="parent"></div>'
+  const stickybit = stickybits('#parent', { useFixed: true });
+
+  const item = stickybit.instances[0];
+  item.spacer.classList.add('spacer');
+
+  expect(item.spacer).not.toBe(null);
+  expect(document.querySelectorAll('.spacer').length).toBe(1);
+})
+
+test("stickybits doesn't display spacer if the element is fixed and state becomes `default`", () => {
+  document.body.innerHTML = '<div id="parent"></div>'
+  const stickybit = stickybits('#parent', { useFixed: true });
+
+  const item = stickybit.instances[0];
+
+  expect(item.state).toBe('default');
+  expect(item.spacer.style['display']).toBe('none');
+})
+
+test("stickybits displays spacer if the element is fixed and state becomes `sticky`", () => {
+  document.body.innerHTML = '<div id="parent"></div>'
+  const stickybit = stickybits('#parent', { useFixed: true });
+
+  const item = stickybit.instances[0];
+  stickybit.isWin = false;
+  item.props.scrollEl = { scrollTop: 100 };
+  item.stickyStart = 0;
+  item.stickyStop = 200;
+  stickybit.manageState(item)
+
+  expect(item.state).toBe('sticky');
+  expect(item.spacer.style['display']).toBe('block');
+})
+
+test("stickybits displays spacer if the element is fixed and state becomes `stuck`", () => {
+  document.body.innerHTML = '<div id="parent"></div>'
+  const stickybit = stickybits('#parent', { useFixed: true });
+
+  const item = stickybit.instances[0];
+  stickybit.isWin = false;
+  item.props.scrollEl = { scrollTop: 200 };
+  item.state = 'sticky';
+  item.stickyStart = 0;
+  item.stickyStop = 200;
+  stickybit.manageState(item)
+
+  expect(item.state).toBe('stuck');
+  expect(item.spacer.style['display']).toBe('block');
+})
+
+test("stickybits removes spacer when the instance is removed", () => {
+  document.body.innerHTML = '<div id="parent"></div>'
+  const stickybit = stickybits('#parent', { useFixed: true });
+
+  const item = stickybit.instances[0];
+  item.spacer.classList.add('spacer');
+  stickybit.removeInstance(item);
+
+  expect(document.querySelectorAll('.spacer').length).toBe(0);
+})
+
+test("stickybits doesn't create spacer if the element isn't fixed", () => {
+  document.body.innerHTML = '<div id="parent"></div>'
+  const stickybit = stickybits('#parent');
+
+  const item = stickybit.instances[0];
+
+  expect(item.spacer).toBe(null);
+  expect(document.querySelectorAll('div').length).toBe(1);
+})
+
 test('stickybits .addInstance interface', () => {
   document.body.innerHTML = '<div id="manage-sticky"></div>'
   const e = document.getElementById('manage-sticky')
