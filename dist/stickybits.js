@@ -1,6 +1,6 @@
 /**
   stickybits - Stickybits is a lightweight alternative to `position: sticky` polyfills
-  @version v3.7.6
+  @version v3.7.7
   @link https://github.com/yowainwright/stickybits#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)
   @license MIT
@@ -84,14 +84,12 @@
     - .removeInstance = removes an instance
     - .cleanup = removes all Stickybits instances and cleans up dom from stickybits
   */
-  var Stickybits =
-  /*#__PURE__*/
-  function () {
+  var Stickybits = /*#__PURE__*/function () {
     function Stickybits(target, obj) {
       var _this = this;
 
       var o = typeof obj !== 'undefined' ? obj : {};
-      this.version = '3.7.6';
+      this.version = '3.7.7';
       this.userAgent = window.navigator.userAgent || 'no `userAgent` provided by the browser';
       this.props = {
         customStickyChangeNumber: o.customStickyChangeNumber || null,
@@ -109,14 +107,14 @@
         applyStyle: o.applyStyle || function (item, style) {
           return _this.applyStyle(item, style);
         }
-        /*
-          define positionVal after the setting of props, because definePosition looks at the props.useFixed
-          ----
-          -  uses a computed (`.definePosition()`)
-          -  defined the position
-        */
-
       };
+      /*
+        define positionVal after the setting of props, because definePosition looks at the props.useFixed
+        ----
+        -  uses a computed (`.definePosition()`)
+        -  defined the position
+      */
+
       this.props.positionVal = this.definePosition() || 'fixed';
       this.instances = [];
       var _this$props = this.props,
