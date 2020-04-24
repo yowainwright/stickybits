@@ -1,9 +1,18 @@
+## [3.7.7](https://github.com/yowainwright/stickybits/compare/3.7.6...3.7.7) (2020-04-24)
+
+
+### package
+
+* bumps deps (#28) ([4f6740e](https://github.com/yowainwright/stickybits/commit/4f6740eca53d726f18e34a113d51b982721bf6ed)), closes [#28](https://github.com/yowainwright/stickybits/issues/28)
+
+
+
 ## [3.7.6](https://github.com/yowainwright/stickybits/compare/3.7.5...3.7.6) (2020-03-27)
 
 
 ### update
 
-* removes config.yml (#3) ([6bf25dcb65afe2fc9e10e9c3903dd1025754bb36](https://github.com/yowainwright/stickybits/commit/6bf25dcb65afe2fc9e10e9c3903dd1025754bb36)), closes [#3](https://github.com/yowainwright/stickybits/issues/3)
+* removes config.yml (#3) ([6bf25dc](https://github.com/yowainwright/stickybits/commit/6bf25dcb65afe2fc9e10e9c3903dd1025754bb36)), closes [#3](https://github.com/yowainwright/stickybits/issues/3)
 
 
 
@@ -12,8 +21,8 @@
 
 ### fix
 
-* new dist files ([0ba091aeec47e8edf3f0799364cc5af27277405f](https://github.com/yowainwright/stickybits/commit/0ba091aeec47e8edf3f0799364cc5af27277405f))
-* new dist files ([650d21f2afb1428582152eb0fd0adca9eec71574](https://github.com/yowainwright/stickybits/commit/650d21f2afb1428582152eb0fd0adca9eec71574))
+* new dist files ([0ba091a](https://github.com/yowainwright/stickybits/commit/0ba091aeec47e8edf3f0799364cc5af27277405f))
+* new dist files ([650d21f](https://github.com/yowainwright/stickybits/commit/650d21f2afb1428582152eb0fd0adca9eec71574))
 
 
 
@@ -22,11 +31,11 @@
 
 ### fix
 
-* fixes issue with not window scroll issue (#660) ([f8de58c1dea01c56ecd4a6f50f03f90303eff6ca](https://github.com/yowainwright/stickybits/commit/f8de58c1dea01c56ecd4a6f50f03f90303eff6ca)), closes [#660](https://github.com/yowainwright/stickybits/issues/660)
+* fixes issue with not window scroll issue (#660) ([f8de58c](https://github.com/yowainwright/stickybits/commit/f8de58c1dea01c56ecd4a6f50f03f90303eff6ca)), closes [#660](https://github.com/yowainwright/stickybits/issues/660)
 
 ### version
 
-* patch version bump (#659) ([07831c50f667e2926811dc08218f65b368d30efc](https://github.com/yowainwright/stickybits/commit/07831c50f667e2926811dc08218f65b368d30efc)), closes [#659](https://github.com/yowainwright/stickybits/issues/659)
+* patch version bump (#659) ([07831c5](https://github.com/yowainwright/stickybits/commit/07831c50f667e2926811dc08218f65b368d30efc)), closes [#659](https://github.com/yowainwright/stickybits/issues/659)
 
 
 
@@ -180,7 +189,7 @@
 
 ### tests
 
-* use npm ci (#279) ([5050a5727110e71b6991245f2e2dcaa5b583d039](https://github.com/yowainwright/stickybits/commit/5050a5727110e71b6991245f2e2dcaa5b583d039)), closes [#279](https://github.com/yowainwright/stickybits/issues/279)
+* use npm ci (#279) ([5050a57](https://github.com/yowainwright/stickybits/commit/5050a5727110e71b6991245f2e2dcaa5b583d039)), closes [#279](https://github.com/yowainwright/stickybits/issues/279)
 
 
 
