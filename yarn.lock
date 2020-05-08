@@ -1285,10 +1285,10 @@ add-stream@^1.0.0:
   resolved "https://registry.yarnpkg.com/add-stream/-/add-stream-1.0.0.tgz#6a7990437ca736d5e1288db92bd3266d5f5cb2aa"
   integrity sha1-anmQQ3ynNtXhKI25K9MmbV9csqo=
 
-adverb-where@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/adverb-where/-/adverb-where-0.2.0.tgz#4c123844265eeba7ca02ccb08a80dfe3c51bb3bc"
-  integrity sha512-fWUACl56t2AQrDbD2yOYFi8cZTNiz0JuqtOwd3wbDMda5mtu8L7uZ3eLXD3ButIvEA4YcIk/fW3PdhMBHn6pUA==
+adverb-where@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/adverb-where/-/adverb-where-0.2.1.tgz#5c639ed02d06c4c61d64296cf72f6ea39e682a49"
+  integrity sha512-IAveFBziMRMNPKFdWRcdIKaJvJG1cAfU9/tf9MzqQ84Dh4QjD9eqwnt4hNSt9cbrcEJD74BMIOaRVgVDEU7MwQ==
 
 agent-base@5:
   version "5.1.1"
@@ -2228,12 +2228,7 @@ commander@2.12.2:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
   integrity sha512-BFnaq5ZOGcDN7FlrtBT4xxkgIToalIIxwjxLWVJ8bGTpe1LroqMiqQXdA7ygc7CRvaYS+9zfPGFnJqFSayx+AA==
 
-commander@^2.11.0, commander@^2.19.0, commander@^2.8.1:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
-  integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
-
-commander@~2.20.3:
+commander@^2.11.0, commander@^2.19.0, commander@^2.8.1, commander@~2.20.3:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -5745,10 +5740,10 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-no-cliches@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/no-cliches/-/no-cliches-0.1.0.tgz#f4eb81a551fecde813f8c611e35e64a5118dc38c"
-  integrity sha1-9OuBpVH+zegT+MYR415kpRGNw4w=
+no-cliches@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/no-cliches/-/no-cliches-0.2.2.tgz#8dca569aa9eb28a8c3f431804a5aadd524607f0a"
+  integrity sha512-iEOqDAOFl6uN5jZGRj39Jdo8qALzf2HPXtpFso8+BMaDylDrUMYMwhFbfYGgxdnMlsRnxYTwv68kaXEpsHIapg==
 
 node-fetch@^2.2.0:
   version "2.6.0"
@@ -7754,10 +7749,10 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-too-wordy@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/too-wordy/-/too-wordy-0.2.1.tgz#1a73cac2187af6801aafc8ddb3bbfdbb6bdd444b"
-  integrity sha512-qZ6Vn6VJPV+im4+7cYLYKEx6CANydGzdxsDJBQdtBmxtL3n67eNwfET/0VB2bVA3O7/T5j6x8F2DiPxUNgIBow==
+too-wordy@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/too-wordy/-/too-wordy-0.2.2.tgz#e02b43a9e0817621a71db5d7d1c67634820a23d0"
+  integrity sha512-ePZfjs1ajL4b8jT4MeVId+9Ci5hJCzAtNIEXIHyFYmKmQuX+eHC/RNv6tuLMUhrGrhJ+sYWW/lBF/LKILHGZEA==
 
 tough-cookie@^2.3.3, tough-cookie@~2.5.0:
   version "2.5.0"
@@ -8142,16 +8137,16 @@ write-file-atomic@^3.0.0:
     typedarray-to-buffer "^3.1.5"
 
 write-good@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/write-good/-/write-good-1.0.0.tgz#ad22474c3862b63b805f53c5fdd780bc2be0e9ee"
-  integrity sha512-4AY0z0cWfT5G1ZVgRnRph7NkXh7BNnqxWZ6Ac4hGezDIgX3R6aJA4vwFjN1OQjDSRP6aEwJD0uaukyNKRxv1Kw==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/write-good/-/write-good-1.0.2.tgz#0b09ed8082f85ebb2fb325b9c7128295681d5b2d"
+  integrity sha512-1gm9Ouz7mBROF7aC8vvSm/3JtPfTiZ+fegPGCKdxsYhf6VYeStHfVFx2Hnj2kJviHPx5zZkiQ8DytzZMP0Zqwg==
   dependencies:
-    adverb-where "^0.2.0"
+    adverb-where "^0.2.1"
     commander "^2.19.0"
     e-prime "^0.10.2"
-    no-cliches "^0.1.0"
+    no-cliches "^0.2.2"
     passive-voice "^0.1.0"
-    too-wordy "^0.2.1"
+    too-wordy "^0.2.2"
     weasel-words "^0.1.1"
 
 write@1.0.3:
