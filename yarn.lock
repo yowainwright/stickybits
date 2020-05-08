@@ -2033,7 +2033,7 @@ chalk@^1.0.0, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.1, chalk@^2.4.2:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -2041,6 +2041,14 @@ chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.1, chalk@^2.4.2:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
+
+chalk@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-3.0.0.tgz#3f73c2bf526591f574cc492c51e2456349f844e4"
+  integrity sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
 
 chalk@^4.0.0:
   version "4.0.0"
@@ -5777,14 +5785,14 @@ node-preload@^0.2.1:
     process-on-spawn "^1.0.0"
 
 node-qunit-phantomjs@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/node-qunit-phantomjs/-/node-qunit-phantomjs-2.0.1.tgz#67d133b1ec272f3e17fbed89a013a79132c91258"
-  integrity sha512-uWTg1S5leriEPAON/ov9KFaYRBHvCi+cioZjvKiMK3CmWCT1abbGDdsnFHVOVuG3fxJfiZfG2l7CumgeKzpyzQ==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/node-qunit-phantomjs/-/node-qunit-phantomjs-2.1.1.tgz#84743ae9953555a3ea150be28dfe8671c4b7e41b"
+  integrity sha512-iZPeSCDdv7NjKJB/FZGlAXXRHxBZ6XeoI+SX8MhSVcIqLw9m5hzMqEU0TD7Efe+zsMIueKkJUmXyve+QVcgc2g==
   dependencies:
-    chalk "^2.4.1"
+    chalk "^3.0.0"
     minimist "^1.2.0"
     phantomjs-prebuilt "^2.1.16"
-    qunit-phantomjs-runner "^2.3.1"
+    qunit-phantomjs-runner "^2.4.1"
 
 node-releases@^1.1.1:
   version "1.1.1"
@@ -6422,14 +6430,14 @@ quick-lru@^1.0.0:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
   integrity sha1-Q2CxfGETatOAeDl/8RQW4Ybc+7g=
 
-qunit-phantomjs-runner@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/qunit-phantomjs-runner/-/qunit-phantomjs-runner-2.3.1.tgz#08326ec821b0b8ad02304d787c2cab7164d7d4c5"
-  integrity sha512-RLg51606zm6/HwZi29NciAMAqifyJE1oGg77tEuk05vEa7kuqEaI0Mkjw976Ynnq7GXurATnbFd+471c024tBQ==
+qunit-phantomjs-runner@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/qunit-phantomjs-runner/-/qunit-phantomjs-runner-2.4.1.tgz#af74160f9f1fa3529106bf55941d2cad86235515"
+  integrity sha512-UBpfyREVhwSmGlJqG+KHDbA5mXGQnSjpluhhIap+5ElymTegjgsNPtq0qLAVaOA2KjcxeByDdYZ13LYNGfHCgg==
   dependencies:
-    qunit-reporter-junit "^1.0.2"
+    qunit-reporter-junit "^1.1.1"
 
-qunit-reporter-junit@^1.0.2:
+qunit-reporter-junit@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/qunit-reporter-junit/-/qunit-reporter-junit-1.1.1.tgz#eeb6226457896993e795a11940f18af6afa579b4"
   integrity sha1-7rYiZFeJaZPnlaEZQPGK9q+lebQ=
