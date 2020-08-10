@@ -61,6 +61,14 @@ yarn add stickybits
 
 ```
 
+pnpm
+
+```sh
+
+pnpm i stickybits
+
+```
+
 npm
 
 ```sh
