@@ -2,36 +2,17 @@
   QUnit Tests
   ----
   - monitors multiple stickybits
+  - TODO: test stacked feature (currently duplicate of "multiple sticky classes" test)
 
 */
 
-// ensure QUnit is working
-QUnit.test('hello test', function(assert) {
-  assert.ok(1 == '1', 'Passed!');
-});
+QUnit.module('stacked', (hooks) => {
 
-var main = document.getElementById('main');
-
-// generateContentBlock
-var content;
-var num;
-var generateTestContent = function(num) {
-  content = '<div id="parent-'+ num +'" class="parent parent-'+ num +'"><div id="child-'+ num +'" class="child child-'+ num +'"><p>Child '+ num +'</p></div></div>';
-  return content;
-};
-
-window.addEventListener('load', function() {
   // default StickyBits test
   // ensures StickyBits is working 
   QUnit.test('Test multiple stickybits', function(assert) {
-    var numbers = ['1', '2', '3'];
-    var content = [];
-    for (var i = 0; numbers.length > i; i += 1) {
-      num = numbers[i];
-      var el = generateTestContent(num);
-      content.push(el);
-    }
-    main.innerHTML = content.join('');
+    ['1', '2', '3'].forEach((num) => generateTestContent(num));
+
     var stickies = stickybits('.child', {useStickyClasses: true});
     var stickyItems = document.querySelectorAll('[style*="position"]');
     assert.equal(stickyItems.length, 3, 'There are 3 sticky items');
