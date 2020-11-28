@@ -30,7 +30,7 @@
     "start": "npm i",
     "test:es-check": "es-check es5 dist/stickybits.min.js dist/stickybits.js dist/jquery.stickybits.js dist/jquery.stickybits.min.js dist/umbrella.stickybits.js dist/umbrella.stickybits.min.js",
     "test:unit": "jest --coverage",
-    "test:acceptance": "node ./scripts/acceptance.js --coverage",
+    "test:acceptance": "node-qunit-puppeteer ./tests/acceptance/index.html 30000 '--no-sandbox'",
     "test": "npm run markdownlint && npm run test:unit && npm run test:acceptance"
   },
   "jest": {
@@ -71,7 +71,7 @@
     "jquery": "^3.2.1",
     "markdown-spellcheck": "^1.3.1",
     "markdownlint-cli": "^0.25.0",
-    "node-qunit-phantomjs": "^2.0.0",
+    "node-qunit-puppeteer": "^2.0.3",
     "nyc": "^15.0.0",
     "qunit": "^2.6.1",
     "rollup": "1.32.1",

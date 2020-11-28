@@ -5,32 +5,28 @@
 
 */
 
-// ensure QUnit is working
-QUnit.test('hello test', function(assert) {
-  assert.ok(1 == '1', 'Passed!');
-});
-var main = document.getElementById('main');
+QUnit.module('multiple sticky classes', (hooks) => {
 
-// generateContentBlock
-var content;
-var num;
-var generateTestContent = function(num) {
-  content = '<div id="parent-'+ num +'" class="parent parent-'+ num +'"><div id="child-'+ num +'" class="child child-'+ num +'"><p>Child '+ num +'</p></div></div>';
-  return content;
-};
+  hooks.beforeEach(() => {
+    generateStyle(`
+    .parent-1 {
+      margin-top: 100px;
+    }
+    .parent-3 {
+      margin-top: 300px;
+    }`);
+  });
 
-window.addEventListener('load', function() {
+  // ensure QUnit is working
+  QUnit.test('hello test', function(assert) {
+    assert.ok(1 == '1', 'Passed!');
+  });
+
   // default StickyBits test
   // ensures StickyBits is working 
   QUnit.test('Test multiple stickbits', function(assert) {
-    var numbers = ['1', '2', '3'];
-    var content = [];
-    for (var i = 0; numbers.length > i; i += 1) {
-      num = numbers[i];
-      var el = generateTestContent(num);
-      content.push(el);
-    }
-    main.innerHTML = content.join('');
+    ['1', '2', '3'].forEach((num) => generateTestContent(num));
+
     var stickies = stickybits('.child', {useStickyClasses: true});
     var stickyItems = document.querySelectorAll('[style*="position"]');
     assert.equal(stickyItems.length, 3, 'There are 3 sticky items');

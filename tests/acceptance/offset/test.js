@@ -5,22 +5,13 @@
 
 */
 
-// ensure QUnit is working
-QUnit.test('hello test', function(assert) {
-  assert.ok(1 == '1', 'Passed!');
-});
+QUnit.module('offset', (hooks) => {
 
-var main = document.getElementById('main');
+  // ensure QUnit is working
+  QUnit.test('hello test', function(assert) {
+    assert.ok(1 == '1', 'Passed!');
+  });
 
-// generateContentBlock
-var num = 1;
-var content;
-var generateTestContent = function(num) {
-  content = '<div id="parent-'+ num +'" class="parent parent-'+ num +'"><div id="child-'+ num +'" class="child child-'+ num +'"><p>Child '+ num +'</p></div></div>';
-  return main.innerHTML = content;
-};
-
-window.addEventListener('load', function() {
   // tests StickyBits test
   // ensures StickyBits offset is working 
   QUnit.test('different stickyOffset test', function(assert) {

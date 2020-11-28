@@ -4,37 +4,20 @@
   -  tests multiples
 */
 
-// ensure QUnit is working
-QUnit.test('hello test', function(assert) {
-  assert.ok(1 == '1', 'Passed!');
-});
+QUnit.module('multiple', (hooks) => {
 
-var main = document.getElementById('main');
+  // ensure QUnit is working
+  QUnit.test('hello test', (assert) => {
+    assert.ok(1 == '1', 'Passed!');
+  });
 
-// generateContentBlock
-var content;
-var num;
-var generateTestContent = function(num) {
-  content = '<div id="parent-'+ num +'" class="parent parent-'+ num +'"><div id="child-'+ num +'" class="child child-'+ num +'"><p>Child '+ num +'</p></div></div>';
-  return content;
-};
-
-
-window.addEventListener('load', function() {
   // default StickyBits test
   // ensures StickyBits is working 
-  QUnit.test('Test multiple stickbits', function(assert) {
-    var numbers = ['1', '2', '3'];
-    var content = [];
-    for (var i = 0; numbers.length > i; i += 1) {
-      num = numbers[i];
-      var el = generateTestContent(num);
-      content.push(el);
-    }
-    main.innerHTML = content.join('');
+  QUnit.test('Test multiple stickbits', (assert) => {
+    ['1', '2', '3'].forEach((num) => generateTestContent(num));
 
     var stickies = stickybits('.child');
     var stickyItems = document.querySelectorAll('[style*="position"]');
     assert.equal(stickyItems.length, 3, 'There are 3 stick items');
   });
-})
+});
