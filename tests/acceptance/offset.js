@@ -7,11 +7,6 @@
 
 QUnit.module('offset', (hooks) => {
 
-  // ensure QUnit is working
-  QUnit.test('hello test', function(assert) {
-    assert.ok(1 == '1', 'Passed!');
-  });
-
   // tests StickyBits test
   // ensures StickyBits offset is working 
   QUnit.test('different stickyOffset test', function(assert) {

@@ -17,11 +17,6 @@ QUnit.module('multiple sticky classes', (hooks) => {
     }`);
   });
 
-  // ensure QUnit is working
-  QUnit.test('hello test', function(assert) {
-    assert.ok(1 == '1', 'Passed!');
-  });
-
   // default StickyBits test
   // ensures StickyBits is working 
   QUnit.test('Test multiple stickbits', function(assert) {

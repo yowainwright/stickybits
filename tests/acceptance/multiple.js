@@ -6,11 +6,6 @@
 
 QUnit.module('multiple', (hooks) => {
 
-  // ensure QUnit is working
-  QUnit.test('hello test', (assert) => {
-    assert.ok(1 == '1', 'Passed!');
-  });
-
   // default StickyBits test
   // ensures StickyBits is working 
   QUnit.test('Test multiple stickbits', (assert) => {
