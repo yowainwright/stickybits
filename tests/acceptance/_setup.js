@@ -21,6 +21,10 @@ function generateStyle(css) {
   fixture.appendChild(style);
 }
 
+function pause (delay) {
+  return new Promise((resolve) => setTimeout(resolve, delay));
+}
+
 QUnit.config.reorder = false;
 
 QUnit.config.urlConfig.push({

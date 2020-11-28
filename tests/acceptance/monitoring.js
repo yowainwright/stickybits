@@ -7,8 +7,6 @@
 
 QUnit.module('monitoring', (hooks) => {
 
-  let pause = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
-
   QUnit.test('useStickyClasses is true', async (assert) => {
     generateTestContent(1);
     const selector = document.querySelector('.child-1');
