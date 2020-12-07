@@ -7867,9 +7867,9 @@ write-file-atomic@^3.0.0:
     typedarray-to-buffer "^3.1.5"
 
 write-good@^1.0.0:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/write-good/-/write-good-1.0.3.tgz#d60d171bd33a1e4f91a6f2cd320e4b8bb1343161"
-  integrity sha512-8n5k4h00o91iYlzudpO8VqmeEjJ2qfMtVA+rhYUVYmibEOEoOXN+YGxB7CY7BZbN2Pv8aDK4oiLSN0a3pAwwOQ==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/write-good/-/write-good-1.0.4.tgz#57f69cbaf45eae4d27c7ae142556d596d905240f"
+  integrity sha512-NA7P2MQ2yw4k+SYq9NQMB0GLchzoprbMRoJgMquLoWzucTozni8k/3hvXvldyDQbgPpPZObzOGvcB6UgqzggzQ==
   dependencies:
     adverb-where "^0.2.1"
     commander "^2.19.0"
