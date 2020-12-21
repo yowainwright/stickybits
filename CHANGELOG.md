@@ -1,3 +1,8 @@
+## [3.7.8](https://github.com/yowainwright/stickybits/compare/3.7.7...3.7.8) (2020-12-14)
+
+
+
+
 ## [3.7.7](https://github.com/yowainwright/stickybits/compare/3.7.6...3.7.7) (2020-04-24)
 
 
