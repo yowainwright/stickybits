@@ -2804,9 +2804,9 @@ es-abstract@^1.17.0, es-abstract@^1.17.0-next.1, es-abstract@^1.17.5:
     string.prototype.trimstart "^1.0.1"
 
 es-check@^5.0.0:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/es-check/-/es-check-5.1.4.tgz#3f92c8fc71a99f0f7cfa04732e3c9a2abdb3b649"
-  integrity sha512-mPfnJ4af0P0QQ8qODF05eumLJBCUldYwIpMkvu6QMVh6uA0l4C0EwE6eDL/EDrrK2hODzoBprE9zPwilLZiD7A==
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/es-check/-/es-check-5.2.0.tgz#c84261061c58286f14c47d9a13e111ee18710760"
+  integrity sha512-9vF1x3LXhANiXgauW+kSFNvEy4XymUddCV2a32Af/ruVmyfLHQPKkVz4bhafJsZhWxXbdiySX+cF7p4/w0ABBQ==
   dependencies:
     acorn "^6.4.1"
     caporal "1.4.0"
