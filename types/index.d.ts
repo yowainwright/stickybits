@@ -23,8 +23,11 @@ export namespace StickyBits {
     parentClass?: string
     scrollEl?: Element | string
     stickyClass?: string
+    stickyParentClass?: string
     stuckClass?: string
+    stuckParentClass?: string
     stickyChangeClass?: string
+    stickyChangeParentClass?: string
     useStickyClasses?: boolean
     useFixed?: boolean
     useGetBoundingClientRect?: boolean
