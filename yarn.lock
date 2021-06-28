@@ -1341,15 +1341,10 @@ acorn-walk@^7.1.1:
   resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-7.1.1.tgz#345f0dffad5c735e7373d2fec9a1023e6a44b83e"
   integrity sha512-wdlPY2tm/9XBr7QkKlq0WQVgiuGTX6YWPyRyBviSoScBuLfTVQhvwg6wJ369GJ/1nPfTLMfnrFIfjqVg6d+jQQ==
 
-acorn@^6.0.7:
+acorn@^6.0.7, acorn@^6.4.1:
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.2.tgz#35866fd710528e92de10cf06016498e47e39e1e6"
   integrity sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==
-
-acorn@^6.4.1:
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
-  integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
 acorn@^7.1.0, acorn@^7.1.1, acorn@^7.4.0:
   version "7.4.0"
@@ -2783,9 +2778,9 @@ es-abstract@^1.18.0-next.1, es-abstract@^1.18.0-next.2:
     unbox-primitive "^1.0.0"
 
 es-check@^5.0.0:
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/es-check/-/es-check-5.2.3.tgz#f0510b3d54cac8caf862149ed36bf764a5513a88"
-  integrity sha512-+KiUcqXXqHk9H05l7Cg2sGrtiUyKcgY5hslm0DSb0iv6K5V/DIiRxJhvgA75TM99xO6FAIGbZSW8bAPbZDsDow==
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/es-check/-/es-check-5.2.4.tgz#76fe2d96ad238bd8ec1d9c3b3d0e98ddbcc723e7"
+  integrity sha512-FZ3qAJ9hwguqPvGGagaKAVDnusSkezeHbiKNM5rOepOjloeVuX2e6meMxQ+mKcnWbAFucCG7fszNrzUT8bvHcQ==
   dependencies:
     acorn "^6.4.1"
     caporal "1.4.0"
