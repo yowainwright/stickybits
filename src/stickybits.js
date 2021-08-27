@@ -65,8 +65,11 @@ class Stickybits {
       parentClass: o.parentClass || 'js-stickybit-parent',
       scrollEl: typeof o.scrollEl === 'string' ? document.querySelector(o.scrollEl) : o.scrollEl || window,
       stickyClass: o.stickyClass || 'js-is-sticky',
+      stickyParentClass: o.stickyParentClass || 'js-is-child-sticky',
       stuckClass: o.stuckClass || 'js-is-stuck',
+      stuckParentClass: o.stuckParentClass || 'js-is-child-stuck',
       stickyChangeClass: o.stickyChangeClass || 'js-is-sticky--change',
+      stickyChangeParentClass: o.stickyChangeParentClass || 'js-is-child-sticky--change',
       useStickyClasses: o.useStickyClasses || false,
       useFixed: o.useFixed || false,
       useGetBoundingClientRect: o.useGetBoundingClientRect || false,
@@ -291,8 +294,11 @@ class Stickybits {
     const pv = p.positionVal
     const se = p.scrollEl
     const sticky = p.stickyClass
+    const stickyParent = p.stickyParentClass
     const stickyChange = p.stickyChangeClass
+    const stickyChangeParent = p.stickyChangeParentClass
     const stuck = p.stuckClass
+    const stuckParent = p.stuckParentClass
     const vp = p.verticalPosition
     const isTop = vp !== 'bottom'
     const aS = p.applyStyle
@@ -350,7 +356,8 @@ class Stickybits {
     // Only apply new styles if the state has changed
     if (state === it.state && stateChange === it.stateChange) return
     rAF(() => {
-      const stateStyles = {
+      const stateStyles = { };
+      stateStyles.element = {
         sticky: {
           styles: {
             position: pv,
@@ -382,19 +389,40 @@ class Stickybits {
           classes: { [stuck]: true },
         },
       }
-
-      if (pv === 'fixed') {
-        stateStyles.default.styles.position = ''
+      stateStyles.parent = {
+        sticky: {
+          classes: { [stickyParent]: true },
+          styles: { }
+        },
+        default: {
+          classes: { },
+          styles: { }
+        },
+        stuck: {
+          classes: { [stuckParent]: true },
+          styles: { }
+        }
       }
 
-      const style = stateStyles[it.state]
+      if (pv === 'fixed') {
+        stateStyles.element.default.styles.position = ''
+      }
+
+      const style = stateStyles.element[it.state]
+      const styleParent = stateStyles.parent[it.state]
       style.classes = {
         [stuck]: !!style.classes[stuck],
         [sticky]: !!style.classes[sticky],
         [stickyChange]: isStickyChange,
       }
+      styleParent.classes = {
+        [stuckParent]: !!styleParent.classes[stuckParent],
+        [stickyParent]: !!styleParent.classes[stickyParent],
+        [stickyChangeParent]: isStickyChange,
+      }
 
       aS(style, item)
+      aS(styleParent, { el: item.el.parentElement, props: { } })
     })
   }
 
