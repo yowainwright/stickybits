@@ -164,6 +164,9 @@ class Stickybits {
       - offset = number
       - stickyStart = number
       - stickyStop = number
+      - spacer = dom element | null
+      - spacerHeight = number
+      - spacerDisplay = 'string'
     - returns an instance object
   */
   addInstance (el, props) {
@@ -171,6 +174,7 @@ class Stickybits {
       el,
       parent: el.parentNode,
       props,
+      spacer: null,
     }
     if (props.positionVal === 'fixed' || props.useStickyClasses) {
       this.isWin = this.props.scrollEl === window
@@ -181,6 +185,15 @@ class Stickybits {
       item.stateChange = 'default'
       item.stateContainer = () => this.manageState(item)
       se.addEventListener('scroll', item.stateContainer)
+      if (!props.noStyles) {
+        item.spacer = item.el.cloneNode()
+        // Avoid duplicate selectors
+        item.spacer.removeAttribute('id')
+        item.spacer.removeAttribute('class')
+        item.parent.insertBefore(item.spacer, item.el)
+        item.spacer.style.visibility = 'hidden'
+        item.spacer.style.display = 'none';
+      }
     }
     return item
   }
@@ -228,8 +241,11 @@ class Stickybits {
     computeScrollOffsets for Stickybits
     - defines
       - offset
-      - start
-      - stop
+      - stickyStart
+      - stickyStop
+      - stickyChange
+      - spacerHeight
+      - spacerDisplay
   */
   computeScrollOffsets (item) {
     const it = item
@@ -252,6 +268,8 @@ class Stickybits {
     it.stickyStop = isTop
       ? parentBottom - (el.offsetHeight + it.offset)
       : parentBottom - window.innerHeight
+    it.spacerHeight = el.offsetHeight
+    it.spacerDisplay = window.getComputedStyle(el).display
   }
 
   /*
@@ -287,6 +305,8 @@ class Stickybits {
     const start = it.stickyStart
     const change = it.stickyChange
     const stop = it.stickyStop
+    const spacerHeight = it.spacerHeight
+    const spacerDisplay = it.spacerDisplay
     // cache props
     const pv = p.positionVal
     const se = p.scrollEl
@@ -358,11 +378,24 @@ class Stickybits {
             bottom: '',
             [vp]: `${p.stickyBitStickyOffset}px`,
           },
+          spacerStyles: {
+            ...(pv === 'fixed' ? {
+              height: `${spacerHeight}px`,
+              display: spacerDisplay,
+            } : {
+              // Omit spacer if position is not 'fixed',
+              //   even if position of state stuck is 'absolute'
+              display: 'none',
+            }),
+          },
           classes: { [sticky]: true },
         },
         default: {
           styles: {
             [vp]: '',
+          },
+          spacerStyles: {
+            display: 'none',
           },
           classes: {},
         },
@@ -378,6 +411,10 @@ class Stickybits {
               top: '',
               bottom: '0',
             } : {}),
+          },
+          spacerStyles: {
+            height: `${spacerHeight}px`,
+            display: spacerDisplay,
           },
           classes: { [stuck]: true },
         },
@@ -403,12 +440,13 @@ class Stickybits {
     ---
     - apply the given styles and classes to the element
   */
-  applyStyle ({ styles, classes }, item) {
+  applyStyle ({ styles, classes, spacerStyles }, item) {
     // cache object
     const it = item
     const e = it.el
     const p = it.props
     const stl = e.style
+    const sp = it.spacer
     // cache props
     const ns = p.noStyles
 
@@ -437,6 +475,12 @@ class Stickybits {
     // eslint-disable-next-line no-unused-vars
     for (const key in styles) {
       stl[key] = styles[key]
+    }
+    if (sp) { 
+      // eslint-disable-next-line no-unused-vars
+      for (const key in spacerStyles) {
+        sp.style[key] = spacerStyles[key]
+      }
     }
   }
 
@@ -472,6 +516,10 @@ class Stickybits {
     )
 
     this.toggleClasses(e.parentNode, p.parentClass)
+
+    if (instance.spacer) {
+      instance.parent.removeChild(instance.spacer)
+    }
   }
 
   /*
