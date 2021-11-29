@@ -3001,9 +3001,9 @@ es-abstract@^1.19.0, es-abstract@^1.19.1:
     unbox-primitive "^1.0.1"
 
 es-check@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/es-check/-/es-check-6.1.0.tgz#6a655e43acec5dcde386a128c23aaa33ffd4c184"
-  integrity sha512-ItMMJGVEhH8B8sg2rU1EY8kqEM1174UUiPKKCrgnnOKx+o8sas+wty2J7nRa6csMyXtl3rePWTCYr8bjHWi6Qw==
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/es-check/-/es-check-6.1.1.tgz#fa6f0dc0291fcff4599a3f1b9ea9de95857d6978"
+  integrity sha512-lH8Cc5UEidAntXNnQrVpc3gPMpF5fO9e9ISCD6geKF5fNcOVkqf3rgmtGjN6gHwItzRelpNz6GnHQxN5fzLW5Q==
   dependencies:
     "@caporal/core" "^2.0.2"
     acorn "^8.4.1"
