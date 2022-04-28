@@ -239,9 +239,11 @@ class Stickybits {
     const isCustom = !this.isWin && p.positionVal === 'fixed'
     const isTop = p.verticalPosition !== 'bottom'
     const scrollElOffset = isCustom ? this.getTopPosition(p.scrollEl) : 0
-    const stickyStart = isCustom
-      ? this.getTopPosition(parent) - scrollElOffset
-      : this.getTopPosition(parent)
+    const stickyStart = this.getTopPosition(el) + (
+      isCustom
+        ? this.getTopPosition(parent) - scrollElOffset
+        : this.getTopPosition(parent)
+    )
     const stickyChangeOffset = p.customStickyChangeNumber !== null
       ? p.customStickyChangeNumber
       : el.offsetHeight
