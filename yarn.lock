@@ -4177,10 +4177,10 @@ hunspell-spellchecker@^1.0.2:
   resolved "https://registry.yarnpkg.com/hunspell-spellchecker/-/hunspell-spellchecker-1.0.2.tgz#a10b0bd2fa00a65ab62a4c6b734ce496d318910e"
   integrity sha1-oQsL0voAplq2Kkxrc0zkltMYkQ4=
 
-husky@7.0.4:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-7.0.4.tgz#242048245dc49c8fb1bf0cc7cfb98dd722531535"
-  integrity sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==
+husky@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.1.tgz#511cb3e57de3e3190514ae49ed50f6bc3f50b3e9"
+  integrity sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
@@ -6569,9 +6569,9 @@ quick-lru@^4.0.1:
   integrity sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==
 
 qunit@^2.6.1:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.19.0.tgz#f830dc4ff23d11dd92628bc01f4e39212dedbc9d"
-  integrity sha512-rC7U6j4EQkYedaccl9rYEMoHisvzM20XwXgy437Q0Apqav16iZQXSb/nglnFqI91J8P5ANXaljEY6VIT+LaSkg==
+  version "2.19.1"
+  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.19.1.tgz#eb1afd188da9e47f07c13aa70461a1d9c4505490"
+  integrity sha512-gSGuw0vErE/rNjnlBW/JmE7NNubBlGrDPQvsug32ejYhcVFuZec9yoU0+C30+UgeCGwq6Ap89K65dMGo+kDGZQ==
   dependencies:
     commander "7.2.0"
     node-watch "0.7.3"
