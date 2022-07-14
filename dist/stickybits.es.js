@@ -283,7 +283,7 @@ var Stickybits = /*#__PURE__*/function () {
     var isCustom = !this.isWin && p.positionVal === 'fixed';
     var isTop = p.verticalPosition !== 'bottom';
     var scrollElOffset = isCustom ? this.getTopPosition(p.scrollEl) : 0;
-    var stickyStart = isCustom ? this.getTopPosition(parent) - scrollElOffset : this.getTopPosition(parent);
+    var stickyStart = this.getTopPosition(el) + (isCustom ? this.getTopPosition(parent) - scrollElOffset : this.getTopPosition(parent));
     var stickyChangeOffset = p.customStickyChangeNumber !== null ? p.customStickyChangeNumber : el.offsetHeight;
     var parentBottom = stickyStart + parent.offsetHeight;
     it.offset = !isCustom ? scrollElOffset + p.stickyBitStickyOffset : 0;
