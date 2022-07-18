@@ -1,3 +1,17 @@
+## [3.7.10](https://github.com/yowainwright/stickybits/compare/3.7.9...3.7.10) (2022-07-18)
+
+
+### fix
+
+* adds min dist ([8d633f6](https://github.com/yowainwright/stickybits/commit/8d633f68cfb61bc5323e994b70bf8fee80185776))
+
+### patch
+
+* bumps version ([0bc4238](https://github.com/yowainwright/stickybits/commit/0bc4238dc887a129925589c6ad9fcfc2f0bdce79))
+* package security release ([10a7a48](https://github.com/yowainwright/stickybits/commit/10a7a48a60e6635afc600511b4ceb02459071254))
+
+
+
 ## [3.7.8](https://github.com/yowainwright/stickybits/compare/3.7.7...3.7.8) (2020-12-14)
 
 
