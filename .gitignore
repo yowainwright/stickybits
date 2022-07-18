@@ -13,3 +13,5 @@ tmp
 .idea
 npm-debug.log
 package-lock.json
+.dccache
+yarn-error.log
