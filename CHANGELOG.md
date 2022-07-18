@@ -1,4 +1,4 @@
-## [3.7.10](https://github.com/yowainwright/stickybits/compare/3.7.9...3.7.10) (2022-07-18)
+## [3.7.11](https://github.com/yowainwright/stickybits/compare/3.7.9...3.7.11) (2022-07-18)
 
 
 ### fix
@@ -7,8 +7,7 @@
 
 ### patch
 
-* bumps version ([0bc4238](https://github.com/yowainwright/stickybits/commit/0bc4238dc887a129925589c6ad9fcfc2f0bdce79))
-* package security release ([10a7a48](https://github.com/yowainwright/stickybits/commit/10a7a48a60e6635afc600511b4ceb02459071254))
+* security fixes (#434) ([a1c3968](https://github.com/yowainwright/stickybits/commit/a1c39684b2cec0ac7488215c4661da6c5c4fcadb)), closes [#434](https://github.com/yowainwright/stickybits/issues/434)
 
 
 
