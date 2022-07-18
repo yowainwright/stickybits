@@ -1,6 +1,6 @@
 /**
   stickybits - Stickybits is a lightweight alternative to `position: sticky` polyfills
-  @version v3.7.10
+  @version v3.7.11
   @link https://github.com/yowainwright/stickybits#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)
   @license MIT
@@ -82,7 +82,7 @@ var Stickybits = /*#__PURE__*/function () {
     var _this = this;
 
     var o = typeof obj !== 'undefined' ? obj : {};
-    this.version = '3.7.10';
+    this.version = '3.7.11';
     this.userAgent = window.navigator.userAgent || 'no `userAgent` provided by the browser';
     this.props = {
       customStickyChangeNumber: o.customStickyChangeNumber || null,
