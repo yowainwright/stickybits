@@ -2,3 +2,4 @@ dist/*
 tests/*
 node_modules/*
 coverage/*
+rollup.config.ts
