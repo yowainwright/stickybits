@@ -60,7 +60,7 @@
     "babel-jest": "^28.0.0",
     "codecov": "^3.0.2",
     "conventional-changelog-cli": "^2.0.11",
-    "es-check": "^6.0.0",
+    "es-check": "^7.0.0",
     "eslint": "^8.0.1",
     "eslint-config-dollarshaveclub": "^3.1.0",
     "eslint-plugin-import": "^2.19.1",
