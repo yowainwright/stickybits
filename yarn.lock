@@ -3025,9 +3025,9 @@ es-abstract@^1.20.4:
     which-typed-array "^1.1.9"
 
 es-check@^7.0.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/es-check/-/es-check-7.1.0.tgz#1015db640a7b785ff4098baf2e0791c070a25964"
-  integrity sha512-t099vm9tNqNHF28Q/mRcqYxmkbkoo/Qu2ZI5/D+eFeqNUjI3jwkIyHyexXiAtstbZ1FQELi0QCuUaYCtiffi4Q==
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/es-check/-/es-check-7.1.1.tgz#c2f8f609fd136d20e5047a4a185f80167e2498bf"
+  integrity sha512-rgwR2wdJp437Exq28Emwc4x5+Qn6ORDliN9daWo0wTCg5jOQxJsIZieqxVi4AfDEIN4OwMwYhld9b13mnRocUQ==
   dependencies:
     acorn "8.8.2"
     commander "10.0.0"
